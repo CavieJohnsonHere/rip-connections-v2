@@ -163,13 +163,17 @@ export default function Game() {
   };
 
   const onCopy = () => {
-    console.log(history)
+    console.log(history);
     const textToCopy = `Rip Connections v2\n${history
       .map((historyAction) => historyAction.join(""))
       .join("\n")}\n\nPlay it now... somewhere...`;
-    try {navigator.clipboard.writeText(textToCopy)} catch {
-      setMessage("Somehing went wrong while copying. Make sure the website has the permissions to od it and make sure you are focused on the web page and the browser window")
-    };
+    try {
+      navigator.clipboard.writeText(textToCopy);
+    } catch {
+      setMessage(
+        "Somehing went wrong while copying. Make sure the website has the permissions to od it and make sure you are focused on the web page and the browser window"
+      );
+    }
   };
 
   // ONLY POPULATE THE cleanData WHEN IT'S EMPTY, IT'LL CAUSE AN INFINITE LOOP IF YOU REMOVE THE CONDITION
@@ -205,10 +209,10 @@ export default function Game() {
                   colors[cat.id]
                 }`}
               >
-                <div className="text-center font-extrabold text-3xl text-black">
+                <div className="text-center font-extrabold text-3xl text-black dark:text-white">
                   {cleanCats[cat.id]}
                 </div>
-                <div className="text-center text-lg mt-2 text-black/75 flex gap-5">
+                <div className="text-center text-lg mt-2 text-black/75 dark:text-white/75 flex gap-5">
                   {cleanData
                     .filter((v) => v.cat_id == cat.id)
                     .sort((a, b) => a.title.localeCompare(b.title))
@@ -258,13 +262,13 @@ export default function Game() {
             <>
               <button
                 onClick={onsubmit}
-                className="bg-emerald-300 col-span-2 w-fit ms-auto text-neutral-800 p-4 text-xl rounded-2xl hover:bg-emerald-400 transition cursor-pointer active:scale-95 select-none border border-neutral-300"
+                className="bg-emerald-300 dark:bg-emerald-700 col-span-2 w-fit ms-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-emerald-400 hover:dark:bg-emerald-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
               >
                 Submit
               </button>
               <button
                 onClick={() => setCleanData(shuffleArray(cleanData))}
-                className="bg-neutral-300 col-span-2 w-fit me-auto text-neutral-800 p-4 text-xl rounded-2xl hover:bg-neutral-400 transition cursor-pointer active:scale-95 select-none border border-neutral-300"
+                className="bg-neutral-300 dark:bg-neutral-700 col-span-2 w-fit me-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-neutral-400 hover:dark:bg-neutral-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
               >
                 Shuffle
               </button>
@@ -278,19 +282,19 @@ export default function Game() {
             <>
               <button
                 onClick={onCopy}
-                className="bg-emerald-300 col-span-2 w-fit ms-auto text-neutral-800 p-4 text-xl rounded-2xl hover:bg-emerald-400 transition cursor-pointer active:scale-95 select-none border border-neutral-300"
+                className="bg-emerald-300 dark:bg-emerald-700 col-span-2 w-fit ms-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-emerald-400 hover:dark:bg-emerald-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
               >
                 Copy
               </button>
               <button
                 onClick={() => setCleanData(shuffleArray(cleanData))}
-                className="bg-neutral-300 col-span-2 w-fit me-auto text-neutral-800 p-4 text-xl rounded-2xl hover:bg-neutral-400 transition cursor-pointer active:scale-95 select-none border border-neutral-300"
+                className="bg-neutral-300 dark:bg-neutral-700 col-span-2 w-fit me-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-neutral-400 hover:dark:bg-neutral-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
               >
                 Archive
               </button>
             </>
           )}
-          <div className="col-span-4 text-center text-neutral-950">
+          <div className="col-span-4 text-center text-neutral-950 dark:text-neutral-50">
             {message}
           </div>
         </>

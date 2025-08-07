@@ -9,7 +9,7 @@ export function App() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* The red text makes us choose a color for each item. It's nice not to be lazy */}
-      <div className="bg-neutral-100 h-screen text-red-500">
+      <div className="bg-neutral-100 dark:bg-neutral-900 h-screen text-red-500">
         <Header />
 
         <Game />
