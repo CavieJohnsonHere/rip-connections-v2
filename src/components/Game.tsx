@@ -84,10 +84,10 @@ export default function Game() {
   );
 
   const colors = [
-    "bg-yellow-500",
-    "bg-green-300",
-    "bg-blue-300",
-    "bg-purple-300",
+    "bg-yellow-500 dark:bg-yellow-600",
+    "bg-green-300 dark:bg-green-700",
+    "bg-blue-300 dark:bg-blue-700",
+    "bg-purple-300 dark:bg-purple-700",
   ];
 
   const onsubmit = () => {
