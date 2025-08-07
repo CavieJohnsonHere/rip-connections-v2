@@ -286,12 +286,13 @@ export default function Game() {
               >
                 Copy
               </button>
-              <button
-                onClick={() => setCleanData(shuffleArray(cleanData))}
+              <a
+                href={`https://www.youtube.com/watch_videos?video_ids=${cleanData.map(v => v.tn).join(",")}`}
+                target="_blank"
                 className="bg-neutral-300 dark:bg-neutral-700 col-span-2 w-fit me-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-neutral-400 hover:dark:bg-neutral-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
               >
-                Archive
-              </button>
+                Today's Playlist
+              </a>
             </>
           )}
           <div className="col-span-4 text-center text-neutral-950 dark:text-neutral-50">
