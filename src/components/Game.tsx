@@ -25,17 +25,7 @@ async function fetchItems(): Promise<[Record<string, string>, Item[]]> {
   const resCats = resContent.cats;
   return [
     resCats,
-    // shuffleArray(resItems).map((v: Item) => {
-    //   return {
-    //     selected: false,
-    //     cat_id: v.cat_id,
-    //     id: v.id,
-    //     title: v.title,
-    //     tn: v.tn,
-    //   };
-    // }),
-
-    resItems.map((v: Item) => {
+    shuffleArray(resItems).map((v: Item) => {
       return {
         selected: false,
         cat_id: v.cat_id,
@@ -44,6 +34,16 @@ async function fetchItems(): Promise<[Record<string, string>, Item[]]> {
         tn: v.tn,
       };
     }),
+
+    // resItems.map((v: Item) => {
+    //   return {
+    //     selected: false,
+    //     cat_id: v.cat_id,
+    //     id: v.id,
+    //     title: v.title,
+    //     tn: v.tn,
+    //   };
+    // }),
   ];
 }
 
