@@ -262,13 +262,13 @@ export default function Game() {
             <>
               <button
                 onClick={onsubmit}
-                className="bg-emerald-300 dark:bg-emerald-700 col-span-2 w-fit ms-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-emerald-400 hover:dark:bg-emerald-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
+                className="text-center w-45 bg-emerald-300 dark:bg-emerald-700 col-span-2 ms-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-emerald-400 hover:dark:bg-emerald-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
               >
                 Submit
               </button>
               <button
                 onClick={() => setCleanData(shuffleArray(cleanData))}
-                className="bg-neutral-300 dark:bg-neutral-700 col-span-2 w-fit me-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-neutral-400 hover:dark:bg-neutral-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
+                className="text-center w-45 bg-neutral-300 dark:bg-neutral-700 col-span-2 me-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-neutral-400 hover:dark:bg-neutral-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
               >
                 Shuffle
               </button>
@@ -282,14 +282,14 @@ export default function Game() {
             <>
               <button
                 onClick={onCopy}
-                className="bg-emerald-300 dark:bg-emerald-700 col-span-2 w-fit ms-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-emerald-400 hover:dark:bg-emerald-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
+                className="text-center w-45 bg-emerald-300 dark:bg-emerald-700 col-span-2 ms-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-emerald-400 hover:dark:bg-emerald-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
               >
                 Copy
               </button>
               <a
                 href={`https://www.youtube.com/watch_videos?video_ids=${cleanData.map(v => v.tn).join(",")}`}
                 target="_blank"
-                className="bg-neutral-300 dark:bg-neutral-700 col-span-2 w-fit me-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-neutral-400 hover:dark:bg-neutral-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
+                className="text-center w-45 bg-neutral-300 dark:bg-neutral-700 col-span-2 me-auto text-neutral-800 dark:text-neutral-200 p-4 text-xl rounded-2xl hover:bg-neutral-400 hover:dark:bg-neutral-600 transition cursor-pointer active:scale-95 select-none border border-neutral-300 dark:border-neutral-700"
               >
                 Today's Playlist
               </a>
